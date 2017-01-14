@@ -1,6 +1,6 @@
 <?php
 
-return [
+$email_driver = [
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'dialemail12345@gmail.com', 'name' => 'Laravel blog example'],
 
     /*
     |--------------------------------------------------------------------------
@@ -110,3 +110,5 @@ return [
     'sendmail' => '/usr/sbin/sendmail -bs',
 
 ];
+
+return $email_driver;
