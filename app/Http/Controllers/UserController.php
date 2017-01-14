@@ -4,19 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller {
-
+class UserController extends Controller
+{
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct() {
-        
-        $this->middleware('guest');
-        
+    public function __construct()
+    {
+        //Ensures user is logged in
+        $this->middleware('auth');
     }
 
     /**
@@ -24,9 +23,8 @@ class HomeController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-
-        return view('welcome');
+    public function index()
+    {
+        return view('home');
     }
-
 }
